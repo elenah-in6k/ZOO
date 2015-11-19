@@ -7,4 +7,8 @@ function AnimalDao() {
   this.getAllAnimals = function () {
     return animals;
   };
+  this.killAnimal = function (i){
+    animals.splice(i, 1);
+
+  }
 };

@@ -6,6 +6,16 @@ var a = allAnimals[0];
   it("has animal = ", function() {
       expect(a.getName()).toEqual("vasia");
   });
+});
 
-
+describe("delete animal in zoo ", function() {
+var animals = new AnimalDao();
+animals.addAnimal(Tiger, "vasia", 8, 9);
+animals.addAnimal(Tiger, "John", 8, 9);
+animals.killAnimal(1);
+var allAnimals = animals.getAllAnimals();
+var a = allAnimals[1];
+  it("has animal = ", function() {
+      expect(allAnimals.length).toEqual(1);
+  });
 });
