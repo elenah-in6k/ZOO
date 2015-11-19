@@ -8,7 +8,7 @@ function Animal(name, size, givingTongueFrequency, feedingFrequency){
   this.giveTongue = function () {
     return self.voice;
   };
-  this.getName = function () {
+  this.getName = function getName(){
     return self.name;
   };
   this.getSize = function () {
