@@ -13,13 +13,16 @@ function Animal(name, size, givingTongueFrequency, feedingFrequency){
   };
   this.getSize = function () {
    return self.size;
- };
+  };
   this.getGivingTongueFrequency = function () {
    return self.givingTongueFrequency;
- };
+  };
+  this.setGivingTongueFrequency = function (time) {
+    return self.givingTongueFrequency = time;
+  };
   this.getFeedingFrequency = function () {
    return self.feedingFrequency;
- };
+  };
   this.getVoice = function () {
    return self.voice;
  };

@@ -1,4 +1,4 @@
-function Racoon(name,givingTongueFrequency, feedingFrequency){
+function Raccoon(name,givingTongueFrequency, feedingFrequency){
   var size = 4;
   Predacious.call(this, name, size, givingTongueFrequency, feedingFrequency);
   this.voice = "Pufff";

@@ -1,5 +1,5 @@
 describe("add predacious animal ", function() {
-    var racoon = new Racoon("racoon",7,8);
+    var racoon = new Raccoon("racoon",7,8);
     it("has name = ", function() {
         expect(racoon.getName()).toEqual("racoon")
     });
