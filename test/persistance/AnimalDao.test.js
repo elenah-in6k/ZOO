@@ -13,7 +13,7 @@ var animals = new AnimalDao();
 animals.addAnimal(Tiger, "vasia", 8, 9);
 animals.addAnimal(Tiger, "John", 8, 9);
 animals.addAnimal(Tiger, "John", 8, 9);
-animals.killAnimal(1);
+animals.killAnimal(animals.getAnimal[1]);
  allAnimals = animals.getAllAnimals();
   it("has animal = ", function() {
       expect(allAnimals.length).toEqual(2);

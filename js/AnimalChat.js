@@ -23,10 +23,13 @@ function AnimalChat(options) {
   }
 
   function giveVoice(animal) {
-
     chat.innerHTML += options.items.getAnimalKind(animal) + " " + animal.getName() + " : " + animal.getVoice() + "<br>";
   }
 
+  function feedTime(animal) {
+    chat.innerHTML += options.items.getAnimalKind(animal) + " " + animal.getName() + " : " + "I want eat. Feed me!!!" + "<br>";
+  }
+  this.feedTime = feedTime;
   this.newShout = giveVoice;
   this.getOutput = getOutput;
 }

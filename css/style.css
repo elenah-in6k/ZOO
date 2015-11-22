@@ -1,0 +1,52 @@
+.animals-list {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+}
+
+.animals-chat {
+  background: #ffffe5;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.chat {
+  width: 50%;
+  font-size: 16px;
+}
+
+.animals-chat .title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.animals-list .title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.animals-list .list-item {
+  background: #ccffcc;
+  padding-bottom: 22px;
+  font-size: 16px;
+}
+
+.animals-list .feed-btn {
+  float: right;
+  margin-right: 5px;
+}
+
+.animals-list .kill-btn {
+  float: right;
+  margin-right: 5px;
+}
+
+.hp-bar {
+  z-index: inherit;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #99ff99;
+}

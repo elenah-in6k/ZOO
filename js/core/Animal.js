@@ -23,6 +23,9 @@ function Animal(name, size, givingTongueFrequency, feedingFrequency){
   this.getFeedingFrequency = function () {
    return self.feedingFrequency;
   };
+  this.setFeedingFrequency = function (time) {
+   return self.feedingFrequency = time;
+  };
   this.getVoice = function () {
    return self.voice;
  };

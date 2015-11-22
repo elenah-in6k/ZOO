@@ -3,6 +3,11 @@ function AnimalController(){
   var animals = new AnimalDao();
   this.getZooAnimals = function () {
     fillAnimals();
+    animals.getAllAnimals().forEach( function (item, i){
+      if (i == 3){animals.killAnimal(item);}
+
+    });
+
     return animals;
   }
 
@@ -11,11 +16,14 @@ function AnimalController(){
   animals.addAnimal(Tiger, "John", 4, 9);
 
   animals.addAnimal(Squirrel, "Layla", 1, 9);
+  animals.addAnimal(Squirrel, "Pippi", 1, 9);
   animals.addAnimal(Monkey, "Anfisa", 2, 9);
   animals.addAnimal(Fox, "Alisa", 7, 9);
   animals.addAnimal(Elephant, "Jack", 8, 9);
   animals.addAnimal(Bear, "Bob", 3, 9);
   animals.addAnimal(Raccoon, "Jimmy", 7, 9);
+
+
 }
 
 

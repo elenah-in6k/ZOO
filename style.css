@@ -1,0 +1,81 @@
+.cage {
+  margin-left: 15px;
+  position: absolute;
+  margin-top: 7%;
+  width: 65%;
+  height: 85%;
+}
+
+.input-group {
+  margin-top: 15px;
+  margin-left: 15px;
+  position: absolute;
+  width: 65%;
+  height: 5%;
+}
+
+.animalChat {
+  background: #CCFFFF;
+  color: #6600FF;
+  position: absolute;
+  width: 30%;
+  left: 70%;
+  height: 100%;
+  overflow-y: scroll;
+}
+ .title {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn-kill {
+  float: right;
+}
+.form-inline {
+  margin-top: 15px;
+  margin-left: 15px;
+  position: absolute;
+  width: 65%;
+  height: 5%;
+
+}
+.select {
+  }
+.herbivore{
+  width: 47%;
+  float: left;
+}
+.predacious{
+  width: 47%;
+  float: right;
+}
+ .list-item {
+    background: #FFFF99;
+    font-size: 21px;
+}
+.Birds  {
+
+}
+.Deers  {
+
+}
+.Monkeys .list-item {
+    background: #FFFF99;
+    font-size: 21px;
+}
+.Elephants  {
+}
+.Hares  {
+}
+.Squirrels  {
+}
+.Bears  {
+}
+.Foxes  {
+}
+.Raccoons  {
+}
+.Serpents  {
+}
+.Tigers  {
+}
