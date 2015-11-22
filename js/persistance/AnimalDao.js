@@ -11,6 +11,8 @@ function AnimalDao() {
   var raccoons = [];
   var serpents = [];
   var tigers = [];
+  var herbivore = [];
+  var predacious = [];
 
   this.addAnimal = function (typeName, name, givingTongueFrequency, feedingFrequency) {
      var newAnimal = new typeName(name, givingTongueFrequency, feedingFrequency);
@@ -25,14 +27,36 @@ function AnimalDao() {
   this.getAnimal = function (i) {
     return animals[i];
   };
-  this.killAnimal = function (animal) {
+  this.killAnimal = function killAnimal (animal) {
     for (var i = 0; i < animals.length; i++) {
       if ( animals[i] == animal )
         animals.splice(i, 1);
     }
     getAllAnimalsOfKind();
+  };
+this.ifHungry = function (animal) {
+  var animalType = animal.getAnimalType();
+  if (animalType == "Herbivore"){
+    killAnimal(animal);
+  } else {
+    if(herbivore.length != 0){
+      eatAnimal(animal, herbivore);
+    } else if(predacious.length != 0) {
+      eatAnimal(animal, predacious);
+    } else {
+      killAnimal(animal);
+    }
   }
-
+}
+function eatAnimal(animal, animals){
+  var j = 0;
+  for (var i = 0; (i < animals.length)&(j<1); i++) {
+    if ( animals[i].getSize < animal.getSize ){
+      killAnimal(animals[i]);
+      j++;
+    }
+  }
+}
  function getAllAnimalsOfKind () {
     birds = [];
     deers = [];
@@ -45,6 +69,8 @@ function AnimalDao() {
     raccoons = [];
     serpents = [];
     tigers = [];
+    herbivore = [];
+    predacious = [];
     animals.forEach( function (item) {
       if (item instanceof Bird){
         birds.push(item);
@@ -70,6 +96,8 @@ function AnimalDao() {
         tigers.push(item);
       }
     });
+    herbivore = herbivore.concat(birds,deers, elephants, monkeys, squirrels, hares);
+    predacious = predacious.concat( bears,  foxes, raccoons, serpents, tigers) ;
   }
   this.getAnimalKind = function (animal) {
     if (animal instanceof Bird){
@@ -96,6 +124,11 @@ function AnimalDao() {
       return "Tiger";
     }
   }
+
+  this.getAllHerbivore = function () {
+        return herbivore ;}
+  this.getAllPredacious = function () {
+        return predacious ;}
   this.getAllBirds = function () {
     return birds ;}
   this.getAllDeers = function () {

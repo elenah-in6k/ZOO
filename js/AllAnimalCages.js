@@ -37,6 +37,7 @@ function AllAnimalCages (allZooAnimal) {
     createCage("Raccoons", allZooAnimal.getAllRaccoons ());
     createCage("Serpents", allZooAnimal.getAllSerpents ());
     createCage("Tigers", allZooAnimal.getAllTigers());
+  
     predacious.appendChild(div);
     cages.appendChild(predacious);
 

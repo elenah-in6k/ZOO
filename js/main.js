@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var voiceInterval;
-  var feedInterval;
+  // var voiceInterval;
+  // var feedInterval;
      var animalController = new AnimalController();
      var  allZooAnimal = animalController.getZooAnimals();
 
@@ -17,17 +17,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
      allZooAnimal.getAllAnimals().forEach ( function (item) {
        giveTongue(item);
-       feedTime(item)
+       });
+     allZooAnimal.getAllAnimals().forEach ( function (item) {
+       feedTime(item);
+       killTime(item);
      });
 
      function giveTongue(animal){
-      voiceInterval =  animal.setGivingTongueFrequency(setInterval(function() {
+     animal.setGivingTongueFrequency(setInterval(function() {
              animalChat.newShout(animal);
            }, animal.getGivingTongueFrequency() * 1000));
        }
-       function feedTime(animal){
-        feedInterval = animal.setFeedingFrequency(setInterval(function() {
-               animalChat.feedTime(animal);
-             }, animal.getFeedingFrequencyy() * 1000));
-         }
+      function feedTime(animal){
+      animal.setFeedingFrequency(setInterval(function() {
+             animalChat.feedTime(animal);
+             }, animal.getFeedingFrequency() * 1000));
+       }
+       function killTime(animal){
+       animal.setFeedingFrequency(setInterval(function() {
+              animalChat.killTime(animal);
+              
+            }, animal.getFeedingFrequency() * 1000 + 1500));
+        }
 });

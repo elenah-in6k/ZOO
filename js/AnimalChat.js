@@ -29,6 +29,11 @@ function AnimalChat(options) {
   function feedTime(animal) {
     chat.innerHTML += options.items.getAnimalKind(animal) + " " + animal.getName() + " : " + "I want eat. Feed me!!!" + "<br>";
   }
+  function killTime(animal) {
+    chat.innerHTML += options.items.getAnimalKind(animal) + " " + animal.getName() + " : " + "I die" + "<br>";
+    options.items.ifHungry(animal);
+  }
+  this.killTime = killTime;
   this.feedTime = feedTime;
   this.newShout = giveVoice;
   this.getOutput = getOutput;
