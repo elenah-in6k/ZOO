@@ -1,18 +1,18 @@
-describe("add herbivore animal ", function() {
+describe("Monkey", function() {
     var monkey = new Monkey("monkey",7,8);
-    it("has name = ", function() {
+    it("has name", function() {
         expect(monkey.getName()).toEqual("monkey")
     });
-    it("has size = ", function() {
+    it("has size", function() {
         expect(monkey.getSize()).toEqual(5)
     });
-    it("has givingTongueFrequency = ", function() {
+    it("has giving tongue frequency", function() {
         expect(monkey.getGivingTongueFrequency()).toEqual(7)
     });
-    it("has feedingFrequency = ", function() {
+    it("has feeding frequency", function() {
         expect(monkey.getFeedingFrequency()).toEqual(8)
     });
-    it("has voice = ", function() {
+    it("has voice", function() {
         expect(monkey.getVoice()).toEqual("Aookikiii")
     });
 
