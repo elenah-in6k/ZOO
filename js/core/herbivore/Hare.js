@@ -4,4 +4,14 @@ function Hare(name,givingTongueFrequency, feedingFrequency){
   this.voice = "khhrum-hrum";
   var self = this;
 
+  function getAnimalKind(type) {
+    if (type == "str") {
+      return "Hare";
+    }else {
+      return Hare;
+    }
+  }
+  this.getAnimalKind = getAnimalKind;
+
+
 }

@@ -19,12 +19,10 @@ function ZooCages (allZooAnimal) {
     titleElem.textContent = "HERBIVORE";
 
     div = document.createElement('div');
-    createCage("Birds", allZooAnimal.getAllBirds());
-    createCage("Deers", allZooAnimal.getAllDeers());
-    createCage("Monkeys", allZooAnimal.getAllMonkeys());
-    createCage("Elephants", allZooAnimal.getAllElephants ());
-    createCage("Hares", allZooAnimal.getAllHares ());
-    createCage("Squirrels", allZooAnimal.getAllSquirrels ());
+    allZooAnimal.getHerbivoreKindsNameList().forEach( function(kind) {
+      createCage(new kind("",0,0).getAnimalKind("str"),
+       allZooAnimal.getAllAnimalsOfKind1(kind));
+    });
     herbivore.appendChild(div);
 
     cages.appendChild(herbivore);
@@ -36,12 +34,10 @@ function ZooCages (allZooAnimal) {
     titleElem.className = "title";
     titleElem.textContent = "PREDACIOUS";
     div = document.createElement('div');
-    createCage("Bears", allZooAnimal.getAllBears ());
-    createCage("Foxes", allZooAnimal.getAllFoxes ());
-    createCage("Raccoons", allZooAnimal.getAllRaccoons ());
-    createCage("Serpents", allZooAnimal.getAllSerpents ());
-    createCage("Tigers", allZooAnimal.getAllTigers());
-
+    allZooAnimal.getPredaciousKindsNameList().forEach( function(kind) {
+      createCage(new kind("",0,0).getAnimalKind("str"),
+       allZooAnimal.getAllAnimalsOfKind1(kind));
+    });
     predacious.appendChild(div);
     cages.appendChild(predacious);
 

@@ -22,22 +22,28 @@ function AnimalChat(options) {
   }
 
   function giveVoice(animal) {
-    chat.innerHTML += options.chatingAnimal.getAnimalKind(animal) + " " +
-    animal.getName() + " : " + animal.getVoice() + "<br>";
+    replica = document.createElement("div");
+    replica.textContent = animal.getAnimalKind("str") + " " +
+    animal.getName() + " : " + animal.getVoice();
+    chat.appendChild(replica);
   }
 
   function feedTime(animal) {
     for (var i = 0; i <  options.chatingAnimal.getAllAnimals().length; i++) {
       if (  options.chatingAnimal.getAllAnimals()[i] == animal ) {
-    chat.innerHTML += options.chatingAnimal.getAnimalKind(animal) + " " +
-    animal.getName() + " : I want eat. Feed me!!!" + "<br>";
+        replica = document.createElement("div");
+        replica.textContent = animal.getAnimalKind("str") + " " +
+    animal.getName() + " : I want eat. Feed me!!!";
+    chat.appendChild(replica);
       }
     }
   }
 
   function killTime(animal, message) {
-    chat.innerHTML += options.chatingAnimal.getAnimalKind(animal) + " " +
-     animal.getName() + message + "<br>";
+    replica = document.createElement("div");
+    replica.textContent = animal.getAnimalKind("str")+ " " +
+     animal.getName() + message;
+     chat.appendChild(replica);
   }
 
   this.killTime = killTime;

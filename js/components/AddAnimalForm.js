@@ -71,6 +71,7 @@ form.appendChild(div);
       document.getElementById('idGivingTongueFrequency').value,
       document.getElementById('idFeedingFrequency').value
     );
+
     e.preventDefault();
     return false;
   };
