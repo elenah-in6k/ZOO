@@ -9,14 +9,14 @@ var a = allAnimals[0];
 });
 
 describe("delete animal in zoo ", function() {
-var newAnimals = new Zoo();
-newAnimals.addAnimal(Tiger, "vasia", 8, 9);
-newAnimals.addAnimal(Tiger, "John", 8, 9);
-newAnimals.addAnimal(Tiger, "John", 8, 9);
- newAnimals.killAnimal(newAnimals.getAnimal(1));
- it("has animals  = ", function() {
-     expect(newAnimals.getAllAnimals().length).toEqual(2);
- });
+  var newAnimals = new Zoo();
+  newAnimals.addAnimal(Tiger, "vasia", 8, 9);
+  newAnimals.addAnimal(Tiger, "John", 8, 9);
+  newAnimals.addAnimal(Tiger, "John", 8, 9);
+   newAnimals.killAnimal(newAnimals.getAnimal(1));
+   it("has animals  = ", function() {
+       expect(newAnimals.getAllAnimals().length).toEqual(2);
+   });
   });
 
 describe("eat some animal ", function() {
