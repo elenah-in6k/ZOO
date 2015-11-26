@@ -1,8 +1,7 @@
-zoo.directive('animalChat', [function () {
+'use strict';
+zooApp.directive('animalcages', [function () {
 	return {
-		restrict: 'A',
-		link: function (scope, iElement, iAttrs) {
-			
-		}
-	};
-}])
+			restrict: 'E',
+        templateUrl: '/views/animalCages.html'
+		};
+}]);

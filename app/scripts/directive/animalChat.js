@@ -1,11 +1,7 @@
-var zoo = angular
-	.module('zoo', []);
-
-	zoo.directive('animalChat', [function () {
+'use strict';
+zooApp.directive('animalchat', [function () {
 		return {
-			restrict: 'A',
-			link: function (scope, iElement, iAttrs) {
-				
-			}
+			restrict: 'E',
+        templateUrl: '/views/animalChat.html'
 		};
-	}])
+	}]);
