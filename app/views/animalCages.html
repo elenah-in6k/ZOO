@@ -1,11 +1,17 @@
 <div class="cages">
-    
     <div class="herbivore">
         <span class="title">HERBIVORE</span>
-
+        <div >
+            <div ng-repeat="animalKind in service.getHerbivoreKindsNameList()">
+                <cage>
+                </cage>
+            </div>
+        </div> </div>
+        <div class="predacious">
+            <span class="title">PREDACIOUS</span>
+<div ng-repeat="animalKind in service.getPredaciousKindsNameList()">
+                <cage>
+                </cage>
+            </div>
+        </div>
     </div>
-     <div class="predacious">
-        <span class="title">PREDACIOUS</span>
-
-    </div>
-</div>

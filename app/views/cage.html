@@ -1,0 +1,13 @@
+<div class = "cage">
+<div >
+<span class="title" > Cage of	</span>
+	
+<ul class ="list-group" >
+<div ng-repeat="animal in service.getAllAnimalsOfKind(animalKind)">
+	<li class="list-group-item list-item">{{animal.getName()}}
+<button ng-click="kill(animal)" class="btn btn-kill" type = "button" > Kill </button>
+	</li>
+	</div>
+</ul>
+	</div>
+</div>

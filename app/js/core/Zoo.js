@@ -99,7 +99,16 @@ function Zoo() {
         return allAnimalsOfKind;
     }
     this.getAllAnimalsOfKind1 = getAllAnimalsOfKind1;
-
+   function getAllAnimalsOfKind(kind) {
+        var allAnimalsOfKind = [];
+        animals.forEach(function(item) {
+            if (item instanceof kind) {
+                allAnimalsOfKind.push(item);
+            }
+        });
+        return allAnimalsOfKind;
+    }
+    this.getAllAnimalsOfKind = getAllAnimalsOfKind;
     function giveTongue(func) {
         animals.forEach(function(animal) {
             animal.setGivingTongueFrequency(setInterval(function() {
