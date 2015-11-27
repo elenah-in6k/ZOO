@@ -1,10 +1,14 @@
 function Zoo() {
     var animals = [];
+    var messages = [];
     var kindsNameList = [Bird, Deer, Elephant, Hare, Monkey, Squirrel,
         Bear, Fox, Raccoon, SerpentGorynych, Tiger
     ];
     var herbivoreKindsNameList = [Bird, Deer, Elephant, Hare, Monkey, Squirrel];
     var predaciousKindsNameList = [Bear, Fox, Raccoon, SerpentGorynych, Tiger];
+    this.getMessages = function() {
+        return messages;
+    }
     this.getKindsNameList = function() {
         return kindsNameList;
     };
@@ -16,6 +20,7 @@ function Zoo() {
     };
     this.addAnimal = function(typeName, name, givingTongueFrequency, feedingFrequency) {
         var newAnimal = new typeName(name, givingTongueFrequency, feedingFrequency);
+        newAnimal.addObserver(this);
         animals.push(newAnimal);
     };
 
@@ -99,7 +104,8 @@ function Zoo() {
         return allAnimalsOfKind;
     }
     this.getAllAnimalsOfKind1 = getAllAnimalsOfKind1;
-   function getAllAnimalsOfKind(kind) {
+
+    function getAllAnimalsOfKind(kind) {
         var allAnimalsOfKind = [];
         animals.forEach(function(item) {
             if (item instanceof kind) {
@@ -109,6 +115,7 @@ function Zoo() {
         return allAnimalsOfKind;
     }
     this.getAllAnimalsOfKind = getAllAnimalsOfKind;
+
     function giveTongue(func) {
         animals.forEach(function(animal) {
             animal.setGivingTongueFrequency(setInterval(function() {
@@ -137,4 +144,34 @@ function Zoo() {
         });
     }
     this.killTime = killTime;
+
+    function startAllTimer() {
+        animals.forEach(function(animal) {
+            animal.startVoiceTimer();
+        });
+    }
+    this.startAllTimer = startAllTimer;
+    this.startKillTimer = function() {
+        if (animal._feedTimer) animal.stopVoiceTimer();
+        animal._killTimer = animal.setFeedingFrequency(feedTimer = setInterval(function() {
+            func(animal);
+        }, animal.getFeedingFrequency() * 950));
+        return animal._killTimer;
+    };
+    this.update = function(animal, updateType, message) {
+        switch (updateType) {
+            case Animal.notifyTypes.kill:
+              
+                break;
+            case Animal.notifyTypes.voice:
+                // debugger;
+                messages.push(animal.getAnimalKind("str") + " " + animal.getName() + " : " + animal.getVoice());
+                break;
+            case Animal.notifyTypes.hungry:
+               
+                break;
+            default:
+                throw new Error("This type of update notify is not support" + updateType);
+        }
+    };
 };

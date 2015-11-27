@@ -5,6 +5,7 @@ zooApp.directive('animalchat', [function() {
         templateUrl: '/views/animalChat.html'
     };
 }]);
+
 zooApp.directive('chatreplica', [function() {
     return {
         restrict: 'E',

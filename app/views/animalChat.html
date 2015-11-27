@@ -1,9 +1,6 @@
-
-  <div class="animalChat">
-            <span class="title"> AnimalChat </span>
-             <div>
-
-             {{service.giveTongue(giveVoice22)}}
-  
-        </div>
-        </div>
+<div class="animalChat">
+    <span class="title"> AnimalChat </span>
+    <div ng-repeat="message in service.getMessages() track by $index">
+         <chatreplica></chatreplica>
+    </div>
+</div>

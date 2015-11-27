@@ -1,6 +1,7 @@
 <div class = "cage">
 <div >
-<span class="title" > Cage of	</span>
+<span class="title" > Cage of {{service.getAllAnimalsOfKind(animalKind)[0]
+.getAnimalKind("str")}}	</span>
 	
 <ul class ="list-group" >
 <div ng-repeat="animal in service.getAllAnimalsOfKind(animalKind)">
