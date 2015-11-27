@@ -2,19 +2,18 @@
 <form class="form-inline" >
     <div class="form-group">
         <label for="idName">Name</label>
-        <input type="text" class="form-control" id="idName" placeholder="Joy">
+        <input type="text" class="form-control" id="idName" ng-model="animall.name" placeholder="Joy">
     </div>
     <div class="form-group">
         <label for="idGivingTongueFrequency">givingTongueFrequency</label>
-        <input type="number" class="form-control"
+        <input type="number" class="form-control" ng-model="animall.givingTongueFrequency"
         id="idGivingTongueFrequency" >
     </div>
     <div class="form-group">
         <label for="idFeedingFrequency">feedingFrequency</label>
-        <input type="number" class="form-control"
-        id="idFeedingFrequency" >
+        <input type="number" class="form-control" ng-model="animall.feedingFrequency" id="idFeedingFrequency" >
     </div>
-    <select class="form-group" name="animalKind" id="animalKind">
+    <select class="form-group" name="animalKind" ng-model="animall.animalKind" id="animalKind">
         <option value=Tiger> Tiger</option>
         <option value=Bird>Bird</option>
         <option value=Deer>Deer</option>
@@ -27,6 +26,6 @@
         <option value=Raccoon>Raccoon</option>
         <option value=SerpentGorynych>SerpentGorynych</option>
     </select>
-    <button type="submit" class="btn btn-default">Add</button>
+    <button ng-click="addAnimal(animall)" type="submit" class="btn btn-default">Add</button>
 </form>
 </div>

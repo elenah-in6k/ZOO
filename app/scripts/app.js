@@ -11,17 +11,25 @@ var zooApp = angular.module('zooApp', ['ngAnimate', 'ngAria', 'ngCookies', 'ngMe
 zooApp.factory('zoo', function() {
     return new AnimalFiller();
 });
+
+function giveVoice22($scope) {
+    $scope.giveVoice22(animal)
+};
 zooApp.controller('zooCtrl', ['$scope', 'zoo', function($scope, zoo) {
     $scope.service = zoo.getZooAnimals();
     $scope.kill = function(animal) {
         $scope.service.killAnimal(animal);
         $scope.apply();
     };
-    $scope.giveVoice = function(animal) {
-      return animal.getAnimalKind("str") + " " +
-    animal.getName() + " : " + animal.getVoice();
+    $scope.addAnimal = function(animal) {
+        $scope.service.addAnimal(window[animal.animalKind], animal.name, animal.givingTongueFrequency, animal.feedingFrequency);
+        $scope.apply();
     };
-    
+    $scope.giveVoice22 = function(animal) {
+        $scope.animal = animal;
+        return
+        document.appendChild(document.createElement("chatReplica"));
+    };
 }]);
 zooApp.config(function($routeProvider) {
     $routeProvider
