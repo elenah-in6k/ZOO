@@ -7,9 +7,20 @@ zooApp.directive('animalcages', [function() {
 }]);
 
 zooApp.directive('cage', [function() {
+
     return {
-    	kindAnimal: "Cage",
+    	scope: {
+    		kindAnimal: "="	
+    	},	
         restrict: 'E',
-        templateUrl: '/views/cage.html'
+        templateUrl: '/views/cage.html',
+        controller: function($scope, $element){
+      		console.log($scope.kindAnimal)
+
+      		$scope.getTitle = function(){
+      			service.getAllAnimalsOfKind($scope.kindAnimal)[0].getAnimalKind("str")
+      		}
+    	}
+  
     };
 }]);

@@ -5,6 +5,7 @@ function Zoo() {
         Bear, Fox, Raccoon, SerpentGorynych, Tiger
     ];
     var herbivoreKindsNameList = [Bird, Deer, Elephant, Hare, Monkey, Squirrel];
+    console.log(herbivoreKindsNameList);
     var predaciousKindsNameList = [Bear, Fox, Raccoon, SerpentGorynych, Tiger];
     this.getMessages = function() {
         return messages;
@@ -94,17 +95,6 @@ function Zoo() {
     }
     this.getAllAnimalsOfType = getAllAnimalsOfType;
 
-    function getAllAnimalsOfKind1(kind) {
-        var allAnimalsOfKind = [];
-        animals.forEach(function(item) {
-            if (item instanceof kind) {
-                allAnimalsOfKind.push(item);
-            }
-        });
-        return allAnimalsOfKind;
-    }
-    this.getAllAnimalsOfKind1 = getAllAnimalsOfKind1;
-
     function getAllAnimalsOfKind(kind) {
         var allAnimalsOfKind = [];
         animals.forEach(function(item) {
@@ -115,6 +105,17 @@ function Zoo() {
         return allAnimalsOfKind;
     }
     this.getAllAnimalsOfKind = getAllAnimalsOfKind;
+
+    // function getAllAnimalsOfKind(kind) {
+    //     var allAnimalsOfKind = [];
+    //     animals.forEach(function(item) {
+    //         if (item instanceof kind) {
+    //             allAnimalsOfKind.push(item);
+    //         }
+    //     });
+    //     return allAnimalsOfKind;
+    // }
+    // this.getAllAnimalsOfKind = getAllAnimalsOfKind;
 
     function giveTongue(func) {
         animals.forEach(function(animal) {

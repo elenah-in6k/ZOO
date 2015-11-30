@@ -3,14 +3,13 @@
         <span class="title">HERBIVORE</span>
         <div >
             <div ng-repeat="animalKind in service.getHerbivoreKindsNameList()">
-            
-                <cage >
-                </cage>
+
+                <cage kind-animal="animalKind"></cage>
             </div>
         </div> </div>
         <div class="predacious">
             <span class="title">PREDACIOUS</span>
-<div ng-repeat="animalKind in service.getPredaciousKindsNameList()">
+            <div ng-repeat="animalKind in service.getPredaciousKindsNameList()">
                 <cage>
                 </cage>
             </div>

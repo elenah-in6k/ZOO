@@ -90,7 +90,7 @@ it("has predacious after all hungry = ", function() {
 describe ("find some kind", function () {
   var zoo = new Zoo();
   it("empty array", function() {
-      expect(zoo.getAllAnimalsOfKind1(Tiger).length).toEqual(0);
+      expect(zoo.getAllAnimalsOfKind(Tiger).length).toEqual(0);
   });
   it("has Tigers", function() {
     zoo.addAnimal(Tiger, "vasia", 8, 9);
@@ -99,7 +99,7 @@ describe ("find some kind", function () {
     zoo.addAnimal(Raccoon, "QQ", 8, 9);
     zoo.addAnimal(Fox, "Jo", 8, 9);
 
-    var bears = zoo.getAllAnimalsOfKind1(Bear);
+    var bears = zoo.getAllAnimalsOfKind(Bear);
 
     expect(bears.length).toEqual(1);
     expect(bears[0].getName()).toEqual("Ti");
