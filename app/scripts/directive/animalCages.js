@@ -5,6 +5,7 @@ zooApp.directive('animalcages', [function() {
         templateUrl: '/views/animalCages.html'
     };
 }]);
+
 zooApp.directive('cage', [function() {
     return {
     	kindAnimal: "Cage",

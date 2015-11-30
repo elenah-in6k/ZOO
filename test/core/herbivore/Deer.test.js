@@ -1,4 +1,4 @@
-describe("add herbivore animal ", function() {
+describe("Deer ", function() {
     var deer = new Deer("deer",7,8);
     it("has name = ", function() {
         expect(deer.getName()).toEqual("deer")
@@ -6,7 +6,7 @@ describe("add herbivore animal ", function() {
     it("has size = ", function() {
         expect(deer.getSize()).toEqual(13)
     });
-    it("has givingTongueFrequency = ", function() {
+    it("has giving tongue frequency = ", function() {
         expect(deer.getGivingTongueFrequency()).toEqual(7)
     });
     it("has feedingFrequency = ", function() {
